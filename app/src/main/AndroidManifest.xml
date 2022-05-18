@@ -27,6 +27,10 @@
             android:name=".Stage1"
             android:label="Stage1"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Inventory"
+            android:label="Inventory"
+            android:theme="@android:style/Theme.Dialog"/>
     </application>
 
 </manifest>
