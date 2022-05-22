@@ -21,9 +21,7 @@ public class Stage1 extends Activity {
     public String[] story = new String[2];
     public int i = 0;
     Button keyBtn,chestBtn;
-    ArrayList<MyItem> inventory;
-    ItemAdapter adapter;
-    TextView str2;
+    TextView str1,str2;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         story[0] = "대충 2번 스토리";
@@ -31,7 +29,7 @@ public class Stage1 extends Activity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.stage1);
-        TextView str1 = (TextView) findViewById(R.id.textView1);
+        str1 = (TextView) findViewById(R.id.textView1);
         str1.setVisibility(View.VISIBLE);
         str1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -92,7 +90,6 @@ public class Stage1 extends Activity {
             @Override
             public void onClick(View v) {
                 str2.setVisibility(View.GONE);
-
             }
         });
     }
