@@ -32,6 +32,9 @@ public class Inventory extends Activity {
         if (data.haveMemo){
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.img),"메모","'4829'라고 적혀있다.");
         }
+        if(data.haveKeyBoard){
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.keyboard),"처음 보는 물건","키보드라고 불리는 것 같다.");
+        }
         mListView.setAdapter(adapter);
 
     }

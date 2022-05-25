@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/project_Room/app/src/main/res/drawable/evil.xml" value="0.1495" />
         <entry key="..\:/project_Room/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/project_Room/app/src/main/res/layout/inventory.xml" value="0.22" />
         <entry key="..\:/project_Room/app/src/main/res/layout/listview_custom.xml" value="0.33" />
         <entry key="..\:/project_Room/app/src/main/res/layout/new_layout.xml" value="0.1" />
-        <entry key="..\:/project_Room/app/src/main/res/layout/stage1.xml" value="0.25" />
+        <entry key="..\:/project_Room/app/src/main/res/layout/password.xml" value="0.5" />
+        <entry key="..\:/project_Room/app/src/main/res/layout/stage0.xml" value="0.3383152173913043" />
+        <entry key="..\:/project_Room/app/src/main/res/layout/stage1.xml" value="0.22" />
         <entry key="..\:/project_Room/app/src/main/res/layout/stage2.xml" value="0.11770833333333333" />
       </map>
     </option>

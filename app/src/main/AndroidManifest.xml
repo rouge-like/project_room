@@ -31,6 +31,13 @@
             android:name=".Inventory"
             android:label="Inventory"
             android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:name=".Stage0"
+            android:label="Stage0"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".password"
+            android:label="password"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
     </application>
 
 </manifest>

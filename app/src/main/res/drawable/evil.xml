@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/evil7"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil6"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil5"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil4"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil3"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil2"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil1"
+        android:duration="100"/>
+    <item android:drawable="@drawable/evil0"
+        android:duration="100"/>
+</animation-list>
