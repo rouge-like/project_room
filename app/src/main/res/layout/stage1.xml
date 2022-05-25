@@ -19,36 +19,88 @@
             android:background="@drawable/main1"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/keyBtn"
-                    android:layout_width="35dp"
-                    android:layout_height="80dp"
-                    android:layout_marginEnd="236dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_weight="0"
-                    android:background="@drawable/img"
-                    android:onClick="onKeyBtn"
-                    android:text="열쇠"
-                    app:layout_constraintBottom_toTopOf="@+id/chestBtn"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/chestBtn"
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="215dp"
-                    android:layout_marginBottom="203dp"
-                    android:layout_weight="0"
-                    android:background="@android:drawable/stat_notify_sdcard"
-                    android:onClick="onChestBtn"
-                    android:text="상자"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <Button
+                        android:id="@+id/keyBtn"
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="612dp"
+                        android:layout_marginBottom="428dp"
+                        android:background="@drawable/img"
+                        android:onClick="onKeyBtn"
+                        android:text="열쇠"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/passwordBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="112dp"
+                        android:text="서랍"
+                        android:onClick="onPassWordBtn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.683" />
+
+                    <Button
+                        android:id="@+id/fire"
+                        android:layout_width="35dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="124dp"
+                        android:layout_marginBottom="440dp"
+                        android:onClick="onLight"
+                        android:text="Button"
+                        android:textColor="#00897B"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Button
+                        android:id="@+id/chestBtn"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="312dp"
+                        android:layout_marginBottom="208dp"
+                        android:background="@android:drawable/stat_notify_sdcard"
+                        android:onClick="onChestBtn"
+                        android:text="상자"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/doorBtn"
+                        android:layout_width="57dp"
+                        android:layout_height="104dp"
+                        android:layout_marginStart="592dp"
+                        android:layout_marginBottom="208dp"
+                        android:alpha="0"
+                        android:text="Door"
+                        android:onClick="onDoorBtn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/light"
+                    android:layout_width="512dp"
+                    android:layout_height="256dp"
+                    android:alpha="0.9"
+                    android:background="#000000"
+                    android:scaleX="400"
+                    android:scaleY="200"
+                    android:textSize="100sp" />
+
+            </FrameLayout>
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -63,7 +115,7 @@
         android:alpha="0.7"
         android:background="@android:color/black"
         android:padding="16dp"
-        android:text="아무 스토리 1번"
+        android:text="Stage -0- 던전"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:visibility="invisible"
@@ -96,4 +148,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
