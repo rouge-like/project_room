@@ -10,4 +10,9 @@ public class data extends Application {
     public static Boolean correctNum = false;
     public static String passWordNum = "";
 
+    public static Boolean st3_onBtn = false;
+    public static Boolean st3_foundKey = false;
+    public static Boolean st3_foundSword = false;
+    public static Boolean st3_monsterDefeat = false;
+
 }
