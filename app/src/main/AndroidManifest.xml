@@ -38,6 +38,9 @@
         <activity android:name=".password"
             android:label="password"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity android:name=".npc"
+            android:label="npc"
+            android:theme="@android:style/Theme.Dialog"/>
     </application>
 
 </manifest>

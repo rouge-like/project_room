@@ -88,6 +88,29 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
+                    <Button
+                        android:id="@+id/npc"
+                        android:layout_width="68dp"
+                        android:layout_height="166dp"
+                        android:layout_marginStart="232dp"
+                        android:layout_marginTop="348dp"
+                        android:text="NPC"
+                        android:onClick="onNPCBtn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/memo1"
+                        android:layout_width="68dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="524dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/memo"
+                        android:onClick="onMemoBtn"
+                        android:text=""
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
@@ -123,6 +146,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/hello"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="200dp"
+        android:hint="인사를 받아주자."
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="#00FF00"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/inventory"
         android:layout_width="wrap_content"
@@ -148,5 +185,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
