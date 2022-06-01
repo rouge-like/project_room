@@ -30,6 +30,71 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/b0"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/img"
+            android:onClick="onB"
+            android:text="검" />
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/keyboard"
+            android:onClick="onB"
+            android:text="" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/resource_null"
+            android:onClick="onB"
+            android:text="" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/resource_null"
+            android:onClick="onB"
+            android:text="" />
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/resource_null"
+            android:onClick="onB"
+            android:text="" />
+
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/resource_null"
+            android:onClick="onB"
+            android:text="" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/up_text"
         android:layout_width="match_parent"
@@ -43,4 +108,16 @@
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/itemView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/resource_null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

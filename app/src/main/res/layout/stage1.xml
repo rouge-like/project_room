@@ -44,12 +44,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="112dp"
-                        android:text="서랍"
+                        android:layout_marginBottom="10dp"
                         android:onClick="onPassWordBtn"
+                        android:text="서랍"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.683" />
+                        app:layout_constraintVertical_bias="0.705" />
 
                     <Button
                         android:id="@+id/fire"
@@ -68,13 +71,14 @@
                         android:id="@+id/chestBtn"
                         android:layout_width="100dp"
                         android:layout_height="80dp"
-                        android:layout_marginStart="312dp"
-                        android:layout_marginBottom="208dp"
+                        android:layout_marginStart="220dp"
                         android:background="@android:drawable/stat_notify_sdcard"
                         android:onClick="onChestBtn"
                         android:text="상자"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.379" />
 
                     <Button
                         android:id="@+id/doorBtn"
@@ -90,14 +94,18 @@
 
                     <Button
                         android:id="@+id/npc"
-                        android:layout_width="68dp"
-                        android:layout_height="166dp"
-                        android:layout_marginStart="232dp"
-                        android:layout_marginTop="348dp"
-                        android:text="NPC"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="156dp"
+                        android:background="@drawable/adventurer_idle_00"
                         android:onClick="onNPCBtn"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.166"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                     <Button
                         android:id="@+id/memo1"
@@ -115,7 +123,7 @@
 
                 <TextView
                     android:id="@+id/light"
-                    android:layout_width="512dp"
+                    android:layout_width="match_parent"
                     android:layout_height="256dp"
                     android:alpha="0.9"
                     android:background="#000000"

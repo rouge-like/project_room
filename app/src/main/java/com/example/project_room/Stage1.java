@@ -188,8 +188,20 @@ public class Stage1 extends Activity {
         }
     }
     public void onMemoBtn(View view){
-        memoDialog m = new memoDialog(this);
-        m.show();
+        str2 = findViewById(R.id.textView2);
+        if (data.lightoff) {
+            str2.setText("어두워서 잘 안 보인다.");
+            str2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    str2.setVisibility(View.GONE);
+                }
+            });
+        }
+        else{
+                memoDialog m = new memoDialog(this);
+                m.show();
+            }
     }
     public void onNPCBtn(View view) {
         str2 = (TextView) findViewById(R.id.textView2);
