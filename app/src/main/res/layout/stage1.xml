@@ -87,8 +87,8 @@
                         android:layout_marginStart="592dp"
                         android:layout_marginBottom="208dp"
                         android:alpha="0"
-                        android:text="Door"
                         android:onClick="onDoorBtn"
+                        android:text="Door"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -97,7 +97,7 @@
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:layout_marginStart="156dp"
-                        android:background="@drawable/adventurer_idle_00"
+                        android:background="@drawable/npc"
                         android:onClick="onNPCBtn"
                         android:text=""
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -193,6 +193,30 @@
         app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="30dp"
+        android:text="No"
+        android:onClick="onNo"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="300dp"
+        android:text="Yes"
+        android:onClick="onYes"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

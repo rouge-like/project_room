@@ -151,6 +151,8 @@ public class Stage1 extends Activity {
     public void onDoorBtn(View view) {
         str2 = (TextView) findViewById(R.id.textView2);
         str2.setVisibility(View.VISIBLE);
+        Button yes = (Button) findViewById(R.id.yes);
+        Button no = (Button) findViewById(R.id.no);
         if (data.lightoff) {
             str2.setText("어두워서 잘 안 보인다.");
             str2.setOnClickListener(new View.OnClickListener() {
@@ -159,7 +161,21 @@ public class Stage1 extends Activity {
                     str2.setVisibility(View.GONE);
                 }
             });
-        } else {
+        }
+        else if (data.haveUpSword){
+            str2.setText("알수없는 힘이 나를 끌어당긴다. 들어가 볼까?");
+            yes.setVisibility(View.VISIBLE);
+            no.setVisibility(View.VISIBLE);
+            str2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    yes.setVisibility(View.GONE);
+                    no.setVisibility(View.GONE);
+                    str2.setVisibility(View.GONE);
+                }
+            });
+        }
+        else {
             str2.setText("<System 접근 불가 @0#$1%@> \n<#$#의 권한 부족 #01#0권한 필#@$>");
             str2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -215,7 +231,12 @@ public class Stage1 extends Activity {
                     str2.setVisibility(View.GONE);
                 }
             });
-        } else {
+        }
+        else if (data.haveUpSword){
+            str2.setVisibility(View.VISIBLE);
+            str2.setText("살려줘,이세계,그만해,결국,도와줘,창조주에,죽이지마,의해,그만둬,멸망,제발,영원히,누가좀,삭제될,멈춰줘,운명,그만,마법사와,괴로워,용사,고통스러워,세계를,멈춰,복구할수,부탁해,없어,아파,이세계를,어지러워,포기해라");
+        }
+        else {
             if (s.equals(data.utfHello)) {
                 Intent intent = new Intent(Stage1.this, npc.class);
                 startActivity(intent);
@@ -252,5 +273,17 @@ public class Stage1 extends Activity {
             }
         }
     }
-}
+    public void onYes(View view){
+        Intent intent = new Intent(this,Stage0.class);
+        startActivity(intent);
+    }
+    public void onNo(View view){
+        Button yes = (Button) findViewById(R.id.yes);
+        Button no = (Button) findViewById(R.id.no);
+        yes.setVisibility(View.GONE);
+        no.setVisibility(View.GONE);
+        str2 = (TextView) findViewById(R.id.textView2);
+        str2.setVisibility(View.GONE);
+    }
+    }
 
