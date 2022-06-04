@@ -9,14 +9,14 @@
         android:id="@+id/horizontalScrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Stage1"
+        tools:context=".Stage3"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
             android:id="@+id/stage3_bg"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/stage3_bg"
+            android:background="@drawable/img2"
             android:orientation="vertical">
 
             <FrameLayout

@@ -23,11 +23,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".data"
-            android:label="data"
-            android:screenOrientation="portrait"
-            tools:ignore="Instantiatable" />
-        <activity
             android:name=".Stage1"
             android:label="Stage1"
             android:screenOrientation="portrait"/>
@@ -35,7 +30,7 @@
             android:name=".Stage3"
             android:label="Stage3"
             android:screenOrientation="portrait"/>
-        <activity0
+        <activity
             android:name=".Inventory"
             android:label="Inventory"
             android:theme="@android:style/Theme.Dialog"/>
