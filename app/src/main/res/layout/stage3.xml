@@ -10,84 +10,87 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Stage3"
-        tools:ignore="SpeakableTextPresentCheck">
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="-73dp">
 
         <LinearLayout
             android:id="@+id/stage3_bg"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/img2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stage3_bg"
             android:orientation="vertical">
 
-            <FrameLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="971dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/sword"
-                        android:layout_width="48dp"
-                        android:layout_height="138dp"
-                        android:layout_marginStart="504dp"
-                        android:layout_marginBottom="264dp"
-                        android:background="@drawable/sword2"
-                        android:onClick="onSwordBtn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                <Button
+                    android:id="@+id/monster"
+                    android:layout_width="74dp"
+                    android:layout_height="134dp"
+                    android:layout_marginStart="964dp"
+                    android:layout_marginBottom="392dp"
+                    android:background="@drawable/skeleton"
+                    android:onClick="onMonsterBtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="47dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="768dp"
-                        android:background="@drawable/button"
-                        android:onClick="onBtn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.72" />
+                <Button
+                    android:id="@+id/safe"
+                    android:layout_width="50dp"
+                    android:layout_height="63dp"
+                    android:layout_marginStart="652dp"
+                    android:layout_marginBottom="392dp"
+                    android:background="@drawable/safe"
+                    android:onClick="onSafeBtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
-                    <Button
-                        android:id="@+id/monster"
-                        android:layout_width="64dp"
-                        android:layout_height="99dp"
-                        android:layout_marginStart="1240dp"
-                        android:layout_marginBottom="448dp"
-                        android:background="@drawable/skeleton"
-                        android:onClick="onMonsterBtn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:ignore="TouchTargetSizeCheck" />
+                <Button
+                    android:id="@+id/portal"
+                    android:layout_width="83dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="296dp"
+                    android:layout_marginBottom="36dp"
+                    android:alpha="0"
+                    android:background="@drawable/portal"
+                    android:onClick="onPortalBtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                    <Button
-                        android:id="@+id/safe"
-                        android:layout_width="69dp"
-                        android:layout_height="49dp"
-                        android:layout_marginStart="856dp"
-                        android:layout_marginBottom="448dp"
-                        android:background="@drawable/safe"
-                        android:onClick="onSafeBtn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="17dp"
+                    android:layout_marginEnd="1692dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button"
+                    android:onClick="onBtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/sword"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
-                    <Button
-                        android:id="@+id/portal"
-                        android:layout_width="78dp"
-                        android:layout_height="107dp"
-                        android:layout_marginStart="600dp"
-                        android:layout_marginBottom="292dp"
-                        android:background="@drawable/portal"
-                        android:alpha="0"
-                        android:onClick="onPortalBtn"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                <Button
+                    android:id="@+id/sword"
+                    android:layout_width="0dp"
+                    android:layout_height="69dp"
+                    android:layout_marginStart="216dp"
+                    android:layout_marginEnd="144dp"
+                    android:layout_marginBottom="20dp"
+                    android:alpha="0"
+                    android:background="@drawable/sword2"
+                    android:onClick="onSwordBtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-A
-            </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </LinearLayout>
 
@@ -117,6 +120,7 @@ A
         android:onClick="onInBtn"
         android:text="인벤토리"
         tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:id="@+id/textView2"
