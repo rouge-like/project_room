@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:id="@+id/stage3_bg"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@drawable/stage3_bg"
             android:orientation="vertical">
@@ -47,16 +47,14 @@
                     android:background="@drawable/safe"
                     android:onClick="onSafeBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
                     android:id="@+id/portal"
-                    android:layout_width="126dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="296dp"
-                    android:layout_marginBottom="36dp"
-                    android:alpha="0"
+                    android:layout_width="66dp"
+                    android:layout_height="108dp"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginBottom="72dp"
                     android:background="@drawable/portal"
                     android:onClick="onPortalBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -64,8 +62,8 @@
 
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="40dp"
-                    android:layout_height="39dp"
+                    android:layout_width="46dp"
+                    android:layout_height="22dp"
                     android:layout_marginEnd="1692dp"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/button"
@@ -77,12 +75,11 @@
 
                 <Button
                     android:id="@+id/sword"
-                    android:layout_width="31dp"
-                    android:layout_height="103dp"
+                    android:layout_width="45dp"
+                    android:layout_height="99dp"
                     android:layout_marginStart="216dp"
                     android:layout_marginEnd="144dp"
                     android:layout_marginBottom="16dp"
-                    android:alpha="0"
                     android:background="@drawable/sword2"
                     android:onClick="onSwordBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
