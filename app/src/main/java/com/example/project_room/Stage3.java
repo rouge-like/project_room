@@ -28,39 +28,37 @@ public class Stage3 extends Activity {
         str1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    str1.setVisibility(View.GONE);
+                str1.setVisibility(View.GONE);
             }
         });
 
         str2 = (TextView) findViewById(R.id.textView2);
 
         btn = (Button) findViewById(R.id.button); //버튼을 눌렀을 때 반응
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (data.st3_onBtn) {
-                    str2.setText("버튼을 누르니 포털이 나타났다.\n들어가보자");
-                    str2.setVisibility(View.VISIBLE);
-                    str2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            str2.setVisibility(View.GONE);
-                        }
-                    });
-                } else if(data.st3_foundKey) {
+                if(data.st3_foundKey) {
                     portal.setVisibility(View.VISIBLE);
                     str2.setText("열쇠가 돌아간다!");
                     str2.setVisibility(View.VISIBLE);
-                    data.st3_onBtn = true;
                     str2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            str2.setVisibility(View.GONE);
+                            portal.setVisibility(View.VISIBLE);
+                            str2.setText("버튼을 누르니 포털이 나타났다.\n들어가보자");
+                            str2.setVisibility(View.VISIBLE);
+                            str2.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    str2.setVisibility(View.GONE);
+                                }
+                            });
                         }
                     });
                 } else {
                     str2.setText("버튼이 작동하지 않는다.\n버튼을 작동시키려면 열쇠가 필요한 것 같다.\n근데 무슨 버튼이지..?");
+                    str2.setVisibility(View.VISIBLE);
                     str2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -109,28 +107,27 @@ public class Stage3 extends Activity {
         monster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(data.st3_monsterDefeat) {
+                if(data.st3_foundSword) {
+                    monster.setVisibility(View.GONE);
+                    data.st3_monsterDefeat = true;
                     data.st3_foundBone = true;
-                    str2.setText("숫자가 적혀 있는 뼈를 주웠다.\n\"1634\"\n무언가의 비밀번호인 듯 하다.");
-                    str2.setVisibility(View.VISIBLE);
-                    str2.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            str2.setVisibility(View.GONE);
-                        }
-                    });
 
-                } else if(data.st3_foundSword) {
                     str2.setText("해골을 해치웠다.");
                     str2.setVisibility(View.VISIBLE);
                     str2.setOnClickListener(new View.OnClickListener() {
                         @Override
-                        public void onClick(View v) {
-                            str2.setVisibility(View.GONE);
+                        public void onClick(View view) {
+                            str2.setText("숫자가 적혀 있는 뼈를 주웠다.\n\"1634\"\n무언가의 비밀번호인 듯 하다.");
+                            str2.setVisibility(View.VISIBLE);
+                            str2.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    str2.setVisibility(View.GONE);
+                                }
+                            });
                         }
                     });
-                    data.st3_monsterDefeat = true;
-                    monster.setVisibility(View.GONE);
+
                 } else {
                     str2.setText("해골이다!\n팔에 무언가 적혀있다.");
                     str2.setVisibility(View.VISIBLE);
@@ -155,37 +152,31 @@ public class Stage3 extends Activity {
         safe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str2 = (TextView) findViewById(R.id.textView2);
-                str2.setText("비밀번호를 입력해야 금고를 열 수 있다.");
-                str2.setVisibility(View.VISIBLE);
-                str2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        str2.setVisibility(View.GONE);
-                    }
-                });
+                if(data.st3_safeOpened) {
+                    data.st3_foundKey = true;
+                    str2.setText("금고를 열었다. 열쇠를 얻었다.");
+                    str2.setVisibility(View.VISIBLE);
+                    str2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            str2.setVisibility(View.GONE);
+                        }
+                    });
+                } else {
+                    str2.setText("비밀번호를 입력해야 금고를 열 수 있다.");
+                    str2.setVisibility(View.VISIBLE);
+                    str2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            str2.setVisibility(View.GONE);
+                        }
+                    });
+                    Intent intent = new Intent(Stage3.this, st3_password.class);
+                    startActivity(intent);
+                }
 
-                Intent intent = new Intent(Stage3.this, st3_password.class);
-                startActivity(intent);
             }
         });
-
     }
 }
-    /*
-
-
-
-
-
-
-
-    @Override
-    public void onBackPressed() {
-        return; //안드로이드 백버튼 막기
-    }
-
-
-
-\*/
 

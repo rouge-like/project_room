@@ -26,10 +26,10 @@
 
                 <Button
                     android:id="@+id/monster"
-                    android:layout_width="101dp"
-                    android:layout_height="177dp"
-                    android:layout_marginStart="964dp"
-                    android:layout_marginBottom="392dp"
+                    android:layout_width="66dp"
+                    android:layout_height="108dp"
+                    android:layout_marginStart="756dp"
+                    android:layout_marginBottom="356dp"
                     android:background="@drawable/skeleton"
                     android:onClick="onMonsterBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -40,8 +40,8 @@
                     android:id="@+id/safe"
                     android:layout_width="50dp"
                     android:layout_height="63dp"
-                    android:layout_marginStart="652dp"
-                    android:layout_marginBottom="392dp"
+                    android:layout_marginStart="360dp"
+                    android:layout_marginBottom="364dp"
                     android:background="@drawable/safe"
                     android:onClick="onSafeBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -50,10 +50,10 @@
 
                 <Button
                     android:id="@+id/portal"
-                    android:layout_width="66dp"
-                    android:layout_height="108dp"
-                    android:layout_marginStart="404dp"
-                    android:layout_marginBottom="152dp"
+                    android:layout_width="61dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="396dp"
+                    android:layout_marginBottom="96dp"
                     android:background="@drawable/portal"
                     android:onClick="onPortalBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -62,10 +62,10 @@
 
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="46dp"
-                    android:layout_height="22dp"
-                    android:layout_marginEnd="872dp"
-                    android:layout_marginBottom="260dp"
+                    android:layout_width="41dp"
+                    android:layout_height="21dp"
+                    android:layout_marginEnd="884dp"
+                    android:layout_marginBottom="152dp"
                     android:background="@drawable/button"
                     android:onClick="onBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -74,11 +74,10 @@
 
                 <Button
                     android:id="@+id/sword"
-                    android:layout_width="45dp"
-                    android:layout_height="99dp"
-                    android:layout_marginStart="216dp"
-                    android:layout_marginEnd="144dp"
-                    android:layout_marginBottom="340dp"
+                    android:layout_width="75dp"
+                    android:layout_height="102dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginBottom="152dp"
                     android:background="@drawable/sword2"
                     android:onClick="onSwordBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +112,7 @@
         android:id="@+id/inventory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onInBtn"
+        android:onClick="onInvBtn"
         android:text="인벤토리"
         tools:ignore="MissingConstraints" />
 
