@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-        ImageView img = (ImageView) findViewById(R.id.evil);
-        AnimationDrawable ani = (AnimationDrawable) img.getDrawable();
-        ani.start();
     }
     public void onBtnStart(View view){
         Intent intent = new Intent(this,Stage3.class);
