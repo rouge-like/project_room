@@ -18,7 +18,6 @@ public class Stage1 extends Activity {
     public String[] story = new String[2];
     public int i = 0;
     public String s="안녕";
-    byte [] b = s.getBytes(StandardCharsets.UTF_8);
     Button keyBtn, chestBtn;
     TextView str1, str2;
 
@@ -65,7 +64,7 @@ public class Stage1 extends Activity {
             });
         } else if (data.haveKey) {
             str2.setText("메모를 획득했다.");
-            chestBtn.setBackgroundResource(R.drawable.img);
+            chestBtn.setBackgroundResource(R.drawable.chest_open);
             data.haveKey = false;
             data.haveMemo = true;
             str2.setOnClickListener(new View.OnClickListener() {
@@ -121,19 +120,25 @@ public class Stage1 extends Activity {
     }
 
     public void onLight(View view) {
+        Button fire_point = (Button) findViewById(R.id.fire_point);
         str2 = (TextView) findViewById(R.id.textView2);
         TextView img = (TextView) findViewById(R.id.light);
         boolean b = !(data.lightoff);
         if (data.lightoff) {
+            fire_point.setVisibility(View.GONE);
             str2.setVisibility(View.VISIBLE);
             str2.setText("횃불에 불을 켰다.");
+            ImageView fire = (ImageView) findViewById(R.id.flame);
+            fire.setVisibility(View.VISIBLE);
+            AnimationDrawable ani = (AnimationDrawable) fire.getDrawable();
+            ani.start();
             str2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     str2.setVisibility(View.GONE);
                 }
             });
-            img.setVisibility(View.INVISIBLE);
+            img.setVisibility(View.GONE);
             data.lightoff = false;
 
         } else if (b) {

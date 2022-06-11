@@ -99,6 +99,8 @@ public class Stage3 extends Activity {
         portal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(Stage3.this, Stage1.class);
+                startActivity(intent);
                 finish();
             }
         });

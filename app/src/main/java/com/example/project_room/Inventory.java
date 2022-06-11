@@ -27,10 +27,10 @@ public class Inventory extends Activity {
     private void dataSetting(){
         ItemAdapter adapter = new ItemAdapter();
         if (data.haveSword){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword),"검","장식되어있는 평범한 검");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword),"검","이 곳에 들어오면서 상태가 조금 달라졌다.");
         }
         if (data.haveKey){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.img),"열쇠","문에 쓰는 열쇠는 아닌듯하다.");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.key),"열쇠","문에 쓰는 열쇠는 아닌듯하다.");
         }
         if (data.haveMemo){
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.img),"메모","'4829'라고 적혀있다.");
