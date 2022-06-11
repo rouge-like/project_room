@@ -26,7 +26,7 @@ public class Inven_st3 extends Activity {
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.key),"열쇠","어디에 쓰이는 열쇠지?");
         }
         if (data.st3_foundSword){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword),"검","무겁지 않아서 휴대하고 있어도 될 듯 하다.");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword_j),"검","무겁지 않아서 휴대하고 있어도 될 듯 하다.");
         }
         if(data.st3_foundBone){
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.bone),"숫자가 적혀있는 뼈","\"1634\"라고 적혀 있다.");
