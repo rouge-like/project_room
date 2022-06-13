@@ -20,7 +20,7 @@ public class Stage3 extends Activity {
         setContentView(R.layout.stage3);
 
         portal = (Button) findViewById(R.id.portal);
-        portal.setVisibility(View.INVISIBLE);
+        portal.setVisibility(View.INVISIBLE); //포털 버튼은 안 보이게 초기 설정
 
         str1 = (TextView) findViewById(R.id.textView1);
         str1.setText("문을 열었더니 또 이상한 곳으로 들어왔다.\n여긴 어디지...?");
@@ -38,7 +38,7 @@ public class Stage3 extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(data.st3_foundKey) {
+                if(data.st3_foundKey) { //열쇠를 발견했을 경우
                     portal.setVisibility(View.VISIBLE);
                     str2.setText("열쇠가 돌아간다!");
                     str2.setVisibility(View.VISIBLE);
@@ -56,7 +56,7 @@ public class Stage3 extends Activity {
                             });
                         }
                     });
-                } else {
+                } else { //버튼을 눌렀을 때 초기 반응
                     str2.setText("버튼이 작동하지 않는다.\n버튼을 작동시키려면 열쇠가 필요한 것 같다.\n근데 무슨 버튼이지..?");
                     str2.setVisibility(View.VISIBLE);
                     str2.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +69,7 @@ public class Stage3 extends Activity {
             }
         });
 
-        sword = (Button) findViewById(R.id.sword);
+        sword = (Button) findViewById(R.id.sword); //검 버튼을 눌렀을 때 반응
         sword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +87,7 @@ public class Stage3 extends Activity {
         });
 
 
-        inven = (Button) findViewById(R.id.inventory);
+        inven = (Button) findViewById(R.id.inventory); //인벤토리(아이템창) 버튼을 눌렀을 때 반응
         inven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,18 +96,18 @@ public class Stage3 extends Activity {
             }
         });
 
-        portal.setOnClickListener(new View.OnClickListener() {
+        portal.setOnClickListener(new View.OnClickListener() { //포털 버튼을 누르면 스테이지 클리어
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
 
-        monster = (Button) findViewById(R.id.monster);
+        monster = (Button) findViewById(R.id.monster); // 몬스터 버튼을 눌렀을 때 반응
         monster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(data.st3_foundSword) {
+                if(data.st3_foundSword) { //검을 주웠을 경우 반응
                     monster.setVisibility(View.GONE);
                     data.st3_monsterDefeat = true;
                     data.st3_foundBone = true;
@@ -128,7 +128,7 @@ public class Stage3 extends Activity {
                         }
                     });
 
-                } else {
+                } else { //검을 획득하지 않고 몬스터 버튼을 눌렀을 경우
                     str2.setText("해골이다!\n팔에 무언가 적혀있다.");
                     str2.setVisibility(View.VISIBLE);
                     str2.setOnClickListener(new View.OnClickListener() {
@@ -148,12 +148,12 @@ public class Stage3 extends Activity {
         });
 
 
-        safe = (Button) findViewById(R.id.safe);
+        safe = (Button) findViewById(R.id.safe); //금고 버튼을 눌렀을 때 반응
         safe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(data.st3_safeOpened) {
-                    data.st3_foundKey = true;
+                if(data.st3_safeOpened) { //비밀번호가 맞아 금고를 열었을 경우
+                    data.st3_foundKey = true; //열쇠 획득
                     str2.setText("금고를 열었다. 열쇠를 얻었다.");
                     str2.setVisibility(View.VISIBLE);
                     str2.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +162,7 @@ public class Stage3 extends Activity {
                             str2.setVisibility(View.GONE);
                         }
                     });
-                } else {
+                } else { //초기 금고 버튼 반응 + 비밀번호 입력창으로 넘어감
                     str2.setText("비밀번호를 입력해야 금고를 열 수 있다.");
                     str2.setVisibility(View.VISIBLE);
                     str2.setOnClickListener(new View.OnClickListener() {
