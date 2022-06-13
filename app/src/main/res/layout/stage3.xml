@@ -74,11 +74,11 @@
 
                 <Button
                     android:id="@+id/sword"
-                    android:layout_width="75dp"
-                    android:layout_height="102dp"
-                    android:layout_marginStart="112dp"
+                    android:layout_width="28dp"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="148dp"
                     android:layout_marginBottom="152dp"
-                    android:background="@drawable/sword2"
+                    android:background="@drawable/sword_removebg_preview__1_"
                     android:onClick="onSwordBtn"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

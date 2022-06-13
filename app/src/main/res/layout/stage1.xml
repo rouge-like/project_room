@@ -27,15 +27,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <ImageView
+                        android:id="@+id/flame"
+                        android:layout_width="196dp"
+                        android:layout_height="136dp"
+                        android:layout_marginBottom="368dp"
+                        android:src="@drawable/frame_00_ani"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.124"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.982" />
+
                     <Button
                         android:id="@+id/keyBtn"
-                        android:layout_width="35dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
                         android:layout_marginStart="612dp"
                         android:layout_marginBottom="428dp"
-                        android:background="@drawable/img"
+                        android:background="@drawable/key"
                         android:onClick="onKeyBtn"
-                        android:text="열쇠"
+                        android:text=""
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -44,19 +58,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="112dp"
-                        android:text="서랍"
+                        android:layout_marginBottom="10dp"
                         android:onClick="onPassWordBtn"
+                        android:text="서랍"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.683" />
+                        app:layout_constraintVertical_bias="0.705" />
 
                     <Button
                         android:id="@+id/fire"
-                        android:layout_width="35dp"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="124dp"
-                        android:layout_marginBottom="440dp"
+                        android:layout_width="26dp"
+                        android:layout_height="54dp"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginBottom="372dp"
+                        android:alpha="0"
                         android:onClick="onLight"
                         android:text="Button"
                         android:textColor="#00897B"
@@ -66,15 +84,16 @@
 
                     <Button
                         android:id="@+id/chestBtn"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="312dp"
-                        android:layout_marginBottom="208dp"
-                        android:background="@android:drawable/stat_notify_sdcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="460dp"
+                        android:background="@drawable/chest"
                         android:onClick="onChestBtn"
-                        android:text="상자"
+                        android:text=""
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.332" />
 
                     <Button
                         android:id="@+id/doorBtn"
@@ -83,22 +102,59 @@
                         android:layout_marginStart="592dp"
                         android:layout_marginBottom="208dp"
                         android:alpha="0"
-                        android:text="Door"
                         android:onClick="onDoorBtn"
+                        android:text="Door"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/npc"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="156dp"
+                        android:background="@drawable/npc"
+                        android:onClick="onNPCBtn"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.166"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <Button
+                        android:id="@+id/memo1"
+                        android:layout_width="68dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="524dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/memo"
+                        android:onClick="onMemoBtn"
+                        android:text=""
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/light"
-                    android:layout_width="512dp"
+                    android:layout_width="match_parent"
                     android:layout_height="256dp"
                     android:alpha="0.9"
                     android:background="#000000"
                     android:scaleX="400"
                     android:scaleY="200"
                     android:textSize="100sp" />
+
+                <Button
+                    android:id="@+id/fire_point"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:alpha="0.7"
+                    android:rotationX="0"
+                    android:translationX="165dp"
+                    android:translationY="272dp"
+                    android:background="@android:drawable/ic_notification_overlay" />
 
             </FrameLayout>
 
@@ -123,6 +179,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/hello"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="200dp"
+        android:hint="인사를 받아주자."
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="#00FF00"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/inventory"
         android:layout_width="wrap_content"
@@ -141,12 +211,37 @@
         android:alpha="0.7"
         android:background="@android:color/black"
         android:padding="16dp"
-        android:visibility="invisible"
         android:text=""
         android:textColor="@android:color/white"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="onNo"
+        android:text="No"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="300dp"
+        android:onClick="onYes"
+        android:text="Yes"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

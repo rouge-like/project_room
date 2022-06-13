@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/frame_00_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_05_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_10_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_15_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_20_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_25_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_30_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_35_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_40_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_45_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_50_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_54_delay_0_02s"
+        android:duration="100"/>
+    <item android:drawable="@drawable/frame_59_delay_0_02s"
+        android:duration="100"/>
+</animation-list>

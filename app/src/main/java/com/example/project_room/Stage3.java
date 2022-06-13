@@ -99,6 +99,8 @@ public class Stage3 extends Activity {
         portal.setOnClickListener(new View.OnClickListener() { //포털 버튼을 누르면 스테이지 클리어
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(Stage3.this, Stage1.class);
+                startActivity(intent);
                 finish();
             }
         });
