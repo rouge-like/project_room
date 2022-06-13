@@ -53,6 +53,9 @@
         <activity android:name=".npc"
             android:label="npc"
             android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".ending"
+            android:label="ending"
+            android:screenOrientation="portrait"/>
     </application>
 
 

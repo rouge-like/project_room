@@ -229,7 +229,7 @@ public class Stage1 extends Activity {
         EditText ed = (EditText) findViewById(R.id.hello);
         if (data.lightoff) {
             str2.setVisibility(View.VISIBLE);
-            str2.setText("b'\\xea\\xb1\\xb0\\xea\\xb8\\xb0 \\xeb\\x88\\x84\\xea\\xb5\\xac \\xec\\x9e\\x88\\xec\\x96\\xb4?\\xec\\x95\\x9e\\xec\\x9d\\xb4 \\xec\\x95\\x88\\xeb\\xb3\\xb4\\xec\\x9d\\xb4\\xeb\\x84\\xa4'");
+            str2.setText("\\xea\\xb1\\xb0\\xea\\xb8\\xb0 \\xeb\\x88\\x84\\xea\\xb5\\xac \\xec\\x9e\\x88\\xec\\x96\\xb4?\\xec\\x95\\x9e\\xec\\x9d\\xb4 \\xec\\x95\\x88\\xeb\\xb3\\xb4\\xec\\x9d\\xb4\\xeb\\x84\\xa4");
             str2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -256,7 +256,7 @@ public class Stage1 extends Activity {
                         s = ed.getText().toString();
                         ed.setVisibility(View.GONE);
                         if (s.equals(data.utfHello)) {
-                            str2.setText("반가워 아이템 강화나 분해를 도와줄게 \nb'\\xec\\x95\\x84\\xec\\x9d\\xb4\\xed\\x85\\x9c\\xec\\x9d\\x84 \\xeb\\xb3\\xb4\\xec\\x97\\xac\\xec\\xa4\\x98'");
+                            str2.setText("반가워 아이템 강화나 분해를 도와줄게 \n\\xec\\x95\\x84\\xec\\x9d\\xb4\\xed\\x85\\x9c\\xec\\x9d\\x84 \\xeb\\xb3\\xb4\\xec\\x97\\xac\\xec\\xa4\\x98");
                             str2.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -264,7 +264,7 @@ public class Stage1 extends Activity {
                                 }
                             });
                         } else {
-                            str2.setText("외국인인가? \n말이 안통하면 도와줄 수 없어.\nb'\\xec\\x9a\\xb0\\xeb\\xa6\\xac\\xeb\\xa7\\x90\\xeb\\xa1\\x9c\\xed\\x95\\xb4\\xeb\\xb4\\x90'");
+                            str2.setText("외국인인가? \n말이 안통하면 도와줄 수 없어.\n\\xec\\x9a\\xb0\\xeb\\xa6\\xac\\xeb\\xa7\\x90\\xeb\\xa1\\x9c\\xed\\x95\\xb4\\xeb\\xb4\\x90");
                             str2.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -281,6 +281,7 @@ public class Stage1 extends Activity {
     public void onYes(View view){
         Intent intent = new Intent(this,Stage0.class);
         startActivity(intent);
+        finish();
     }
     public void onNo(View view){
         Button yes = (Button) findViewById(R.id.yes);
