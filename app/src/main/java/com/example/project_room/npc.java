@@ -128,8 +128,15 @@ public class npc extends Activity {
         stone_i[1] = (Button)findViewById(R.id.stone2);
         img = (ImageView) findViewById(R.id.itemView);
         if (b_i.getId()==R.id.b0){
-            img.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword));
-            data.whatItem = "sword";
+            if(data.whatItem.equals("sword_up")){
+                str.setVisibility(View.GONE);
+                Toast.makeText(this,"<System.Error>\n<알수없는 접근 감지 #$^@!1 불가 #$@!$>",Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            else {
+                img.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.sword));
+                data.whatItem = "sword";
+            }
         }
         else if (data.haveKeyBoard){
             if(b_i.getId()==R.id.b1){
