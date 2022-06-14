@@ -2,9 +2,9 @@ package com.example.project_room;
 
 import android.graphics.drawable.Drawable;
 
-public class MyItem {
-    private Drawable icon;
-    private String name,contents;
+public class MyItem { //MyItem 클래스 각 요소들을 저장하고 반환함
+    private Drawable icon; // 인벤토리에 나오는 이미지
+    private String name,contents; //인벤토리에 나오는 아이템이름, 아이템설명
 
     public Drawable getIcon() {
         return icon;

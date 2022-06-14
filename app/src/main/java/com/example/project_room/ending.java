@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 public class ending extends Activity {
     int i = 0;
-    public String s = "";
-    public String [] e = new String[6];
-    public String [] d = new String[9];
+    public String s = ""; //문자열을 계속 합치기 위한 초기 문자열
+    public String [] e = new String[6]; //1번 엔딩에 출력할 텍스트
+    public String [] d = new String[9]; //2번 엔딩에 출력할 텍스트
     @Override
     protected void onCreate(Bundle savedInstanceState){
         e[0] = "엔딩 1";
@@ -32,28 +32,28 @@ public class ending extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.ending);
         super.onCreate(savedInstanceState);
-        TextView str = (TextView) findViewById(R.id.textView3);
-        if(data.ending){
-            str.setOnClickListener(new View.OnClickListener(){
+        TextView str = (TextView) findViewById(R.id.textView3); //textView를 str로 불러옴
+        if(data.ending){ //1번 엔딩일 경우
+            str.setOnClickListener(new View.OnClickListener(){ //str 클릭시 마다 실행
                 @Override
                 public void onClick(View v){
-                    if(i>5){finish();}
+                    if(i>5){finish();} //모든 텍스트 출력시 게임 종료
                     else {
-                        s += e[i];
-                        str.setText(s);
+                        s += e[i]; //s에 e[i]문자열을 합침
+                        str.setText(s); //s를 출력
                         i++;
                     }
                 }
             });
         }
-        else{
+        else{//2번 엔딩일 경우
             str.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-                    if(i>8){finish();}
+                    if(i>8){finish();} //모든 텍스트 출력시 게임 종료
                     else {
-                        s += d[i];
-                        str.setText(s);
+                        s += d[i]; //s에 d[i]문자열을 합침
+                        str.setText(s); //s를 출력
                         i++;
                     }
                 }

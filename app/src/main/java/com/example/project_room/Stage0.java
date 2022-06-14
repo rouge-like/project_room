@@ -13,21 +13,21 @@ import android.widget.Toast;
 public class Stage0 extends Activity {
     public int i=0;
     public int j=0;
-    public int k=0;
-    public String [] end = new String[26];
-    public String [] a = new String[8];
-    public String [] b = new String[8];
+    public int k=0; //텍스트 설정을 위한 변수들
+    public String [] end = new String[26]; //엔딩 스토리 텍스트가 저장됨
+    public String [] a = new String[8]; //선택지 a 텍스트가 저장됨
+    public String [] b = new String[8]; //선택지 b 텍스트가 저장됨
     public String [] ending1 = new String [20];
-    public String [] ending2 = new String [20];
+    public String [] ending2 = new String [20]; //엔딩2 스토리 텍스트가 저장됨
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stage0);
-        ImageView evil = (ImageView) findViewById(R.id.evil);
-        ImageView magic = (ImageView)findViewById(R.id.magic);
+        ImageView evil = (ImageView) findViewById(R.id.evil); //evil의 이미지뷰
+        ImageView magic = (ImageView)findViewById(R.id.magic); //magic의 이미지뷰
         magic.setVisibility(View.GONE);
         AnimationDrawable ani = (AnimationDrawable) evil.getDrawable();
-        ani.start();
+        ani.start();//evil의 애니매이션을 재생함.
         a[0] = "너는...설마..";
         a[1] = "목적이 뭐냐 날 왜 여기로 부른거지?";
         a[2] = "아니..모른다";
@@ -88,86 +88,86 @@ public class Stage0 extends Activity {
     public void onBackPressed() {
         return; //안드로이드 백버튼 막기
     }
-    public void gotoend(){
+    public void gotoend(){ //ending을 화면에 띄우는 함수
         Intent intent = new Intent(this,ending.class);
         startActivity(intent);
     }
-    public void onEvil(View v){
+    public void onEvil(View v){ //evil을 클릭시 실행
         ImageView magic = (ImageView)findViewById(R.id.magic);
         ImageView evil = (ImageView)findViewById(R.id.evil);
         TextView str = (TextView) findViewById(R.id.textView2);
         Button b1 = (Button)findViewById(R.id.button1);
         Button b2 = (Button)findViewById(R.id.button2);
         str.setVisibility(View.VISIBLE);
-        if(i==0){str.setText("드디어 왔는가 용사여...");}
-        str.setOnClickListener(new View.OnClickListener() {
+        if(i==0){str.setText("드디어 왔는가 용사여...");} //처음 클릭시 나타낼 텍스트
+        str.setOnClickListener(new View.OnClickListener() { //str을 클릭할때마다 실행
             @Override
             public void onClick(View v) {
-                if(i % 3 == 0 && i<19 || i == 24){
+                if(i % 3 == 0 && i<19 || i == 24){ //특정한 i값에만 setButton을 true로 바꿈
                     data.setButton = true;
                 }
-                if(i>24){
-                    if(data.killHim){
-                        evil.setVisibility(View.GONE);
+                if(i>24){ //엔딩 텍스트를 모두 출력했을때
+                    if(data.killHim){ //evil를 죽인다는 선택을 했을 시
+                        evil.setVisibility(View.GONE); //evil의 이미지뷰를 제거
                         str.setText("그는 순식간에 흔적도 없이 사라졌다.");
-                        data.ending = true;
+                        data.ending = true; //1번 엔딩으로 설정
                         str.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 str.setVisibility(View.GONE);
-                                gotoend();
-                                finish();
+                                gotoend(); //gotoend함수 실행
+                                finish(); //str 클릭시 이 Stage를 닫음
                             }
                         });
                     }
-                    else{
+                    else{ //evil를 죽이지 않는다는 선택을 했을 시
                         AnimationDrawable m = (AnimationDrawable) magic.getDrawable();
-                        if(k==4){
+                        if(k==4){ //4번 스토리 텍스트 출력 후 실행
                             magic.setVisibility(View.VISIBLE);
-                            m.start();
+                            m.start(); //magic의 애니매이션 재생
                         }
-                        if(k>11){
-                            data.ending = false;
+                        if(k>11){ //모든 텍스트를 출력 후 실행
+                            data.ending = false; //2번 엔딩으로 설정
                             gotoend();
-                            finish();
+                            finish(); //이 스테이지를 닫음
                         }
-                        str.setText(ending2[k]);
+                        str.setText(ending2[k]); //엔딩2 스토리를 매 클릭씩마다 출력
                         k++;
                     }
                 }
-                if(data.setButton){
-                    b1.setVisibility(View.VISIBLE);
-                    b1.setText(a[j]);
-                    b2.setVisibility(View.VISIBLE);
-                    b2.setText(b[j]);
-                    b1.setOnClickListener(new View.OnClickListener(){
+                if(data.setButton){ //a,b 선택지를 나타내는 조건 만족했을 때
+                    b1.setVisibility(View.VISIBLE);//a 선택지
+                    b1.setText(a[j]); //a 선택지의 텍스트 설정
+                    b2.setVisibility(View.VISIBLE);//b 선택지
+                    b2.setText(b[j]); //b 선택지의 텍스트 설정
+                    b1.setOnClickListener(new View.OnClickListener(){ //a 선택지 클릭시 실행
                         @Override
                         public void onClick(View v){
                             i++;
-                            str.setText(end[i]);
+                            str.setText(end[i]); //다음 엔딩 스토리 텍스트 출력
                             b1.setVisibility(View.GONE);
-                            b2.setVisibility(View.GONE);
-                            data.setButton = false;
+                            b2.setVisibility(View.GONE); //선택지 a,b를 제거
+                            data.setButton = false; //선택지버튼이 안나오게 false로 변경
                             j++;
-                            data.killHim = true;
+                            data.killHim = true; //a를 선택시 그를 죽인다는 선택
                         }
                     });
-                    b2.setOnClickListener(new View.OnClickListener(){
+                    b2.setOnClickListener(new View.OnClickListener(){ //b 선택지 클릭시 실행
                         @Override
                         public void onClick(View v){
                             i++;
-                            str.setText(end[i]);
+                            str.setText(end[i]); //다음 엔딩 스토리 텍스트 출력
                             b1.setVisibility(View.GONE);
-                            b2.setVisibility(View.GONE);
-                            data.setButton = false;
+                            b2.setVisibility(View.GONE);//선택지 a,b를 제거
+                            data.setButton = false; //선택지 버튼이 안나오게 false로 변경
                             j++;
-                            data.killHim = false;
+                            data.killHim = false;//b를 선택 시 그를 죽이지 않는다는 선택
                         }
                     });
                 }
-                else if(i<25){
+                else if(i<25){ //출력할 텍스트가 아직 있을 경우
                     i++;
-                    str.setText(end[i]);
+                    str.setText(end[i]); //텍스트 순서대로 클릭할때마다 출력
                 }
             }
         });

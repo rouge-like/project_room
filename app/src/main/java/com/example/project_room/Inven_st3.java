@@ -26,7 +26,7 @@ public class Inven_st3 extends Activity { //Stage 3의 인벤토리(아이템창
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.key),"열쇠","어디에 쓰이는 열쇠지?");
         }
         if (data.st3_foundSword){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword),"검", "");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.sword),"검", "평범한 검이다.");
         }
         if(data.st3_foundBone){
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.bone),"숫자가 적혀있는 뼈","\"1634\"라고 적혀 있다.");

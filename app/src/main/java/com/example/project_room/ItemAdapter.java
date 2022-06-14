@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ItemAdapter extends BaseAdapter {
+public class ItemAdapter extends BaseAdapter { //ListView에 아이템을 나타내기 위한 java파일
 
-    private ArrayList<MyItem> mItems = new ArrayList<>();
+    private ArrayList<MyItem> mItems = new ArrayList<>(); //아이템들의 데이터가 저장된 list
     @Override
     public int getCount(){return mItems.size();}
     @Override
@@ -36,17 +36,15 @@ public class ItemAdapter extends BaseAdapter {
         tv_name.setText(myitem.getName());
         tv_contents.setText(myitem.getContents());
 
-
-
         return convertView;
-    }
-    public void addItem(Drawable img, String name,String contents){
+    }//BaseAdapter 기본 함수들 셋팅, 실제로 사용하지는 않음
+    public void addItem(Drawable img, String name,String contents){ //입력받은 데이터를 추가
         MyItem mItem = new MyItem();
 
-        mItem.setIcon(img);
-        mItem.setName(name);
-        mItem.setContents(contents);
-        mItems.add(mItem);
+        mItem.setIcon(img); //입력받은 icon을 mItem에 셋팅
+        mItem.setName(name);//name셋팅
+        mItem.setContents(contents); //contents셋팅
+        mItems.add(mItem);//셋팅 완료된 mItem을 mItems 리스트에 추가
     }
 
 }
