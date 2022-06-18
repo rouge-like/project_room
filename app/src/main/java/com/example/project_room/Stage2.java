@@ -19,7 +19,7 @@ public class Stage2 extends Activity {
 
         setContentView(R.layout.stage2);
 
-        Door = (Button) findViewById(R.id.portal);
+        Door = (Button) findViewById(R.id.DoorBtn);
         Door.setVisibility(View.INVISIBLE); // 마지막 문 잠금장치는 처음에 안보이게 표현
 
         str1 = (TextView) findViewById(R.id.textView1);
@@ -38,7 +38,7 @@ public class Stage2 extends Activity {
         Lock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (data.st2_key4){ //4개의 키를 획득했을 경우
+                if (data.st2_key1&data.st2_key2&data.st2_key3&data.st2_key4){ //4개의 키를 획득했을 경우
                     Door.setVisibility(View.VISIBLE);
                     str2.setText("잠금장치가 풀렸다.");
                     str2.setVisibility(View.VISIBLE);
@@ -73,7 +73,7 @@ public class Stage2 extends Activity {
         Statue1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str2.setText("석상에서 쪽지가 나왔다. ");
+                str2.setText("석상에서 쪽지가 나왔다.\n망자를 살려내며 너를 웃게 하고, 젊게 만들어주며, 찰나에 태어나지만, 평생 지속된다. ");
                 str2.setVisibility(View.VISIBLE);
                 str2.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -90,7 +90,7 @@ public class Stage2 extends Activity {
         Statue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str2.setText("석상에서 쪽지가 나왔다. ");
+                str2.setText("석상에서 쪽지가 나왔다.\n원하지 않더라도 이것이 너를 갉아먹을 것이며 너를 점점 더 힘들게 만들 것이다. ");
                 str2.setVisibility(View.VISIBLE);
                 str2.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -107,7 +107,7 @@ public class Stage2 extends Activity {
         Statue3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str2.setText("석상에서 쪽지가 나왔다. ");
+                str2.setText("석상에서 쪽지가 나왔다.\n찬란한 순간이며 그 누구도 조종할 수 없으며 모든 생명체가 가질 수 있는 특권이다. ");
                 str2.setVisibility(View.VISIBLE);
                 str2.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -124,7 +124,7 @@ public class Stage2 extends Activity {
         Statue4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str2.setText("석상에서 쪽지가 나왔다. ");
+                str2.setText("석상에서 쪽지가 나왔다.\n몇몇은 숨으려 하고 몇몇은 속이려 하지만, 시간이 지나면 반드시 만나야 하는 존재. 그 이름을 맞춰보라. 네가 소환될 때가 오면 반드시 알게 될것이다. ");
                 str2.setVisibility(View.VISIBLE);
                 str2.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -148,15 +148,15 @@ public class Stage2 extends Activity {
         });
 
         Door = (Button) findViewById(R.id.DoorBtn);
-        Door.setOnClickListener(new View.OnClickListener() { // 문에서 마지막 비밀번호를 입력하면 스테이지 클리어.
+        Door.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
                                         if (data.st2_Dooropened) {
-                                            Intent intent = new Intent(Stage2.this, Stage1.class);
+                                            Intent intent = new Intent(Stage2.this, Stage1.class); // door puzzle에서 마지막 비밀번호를 입력하면 스테이지 클리어
                                             startActivity(intent);
                                             finish();
                                         } else { //문 반응 -> 문제와 힌트 -> 비밀번호 입력창으로 넘어감
-                                            str2.setText("4개의 쪽지와 관련된 비밀번호를 입력하시오.\n Hint : 'ㅅㄹ', 'h____'");
+                                            str2.setText("4개의 쪽지와 관련된 비밀번호를 입력하시오.\n Hint : 'ㅅㄱ', 't___'");
                                             str2.setVisibility(View.VISIBLE);
                                             str2.setOnClickListener(new View.OnClickListener() {
                                                 @Override
@@ -164,7 +164,7 @@ public class Stage2 extends Activity {
                                                     str2.setVisibility(View.GONE);
                                                 }
                                             });
-                                            Intent intent = new Intent(Stage2.this, Door_puzzle.class);
+                                            Intent intent = new Intent(Stage2.this, Door_puzzle.class); // door puzzle로 넘어가 비밀번호 입력
                                             startActivity(intent);
                                         }
                                     }

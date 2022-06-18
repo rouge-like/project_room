@@ -23,16 +23,16 @@ public class Inven_st2 extends Activity { //Stage 2의 인벤토리(아이템창
     private void dataSetting(){
         ItemAdapter adapter = new ItemAdapter();
         if (data.st2_memory){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.memory),"00", "00의 설명.");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.memory),"00", "Hint : 'm_____y");
         }
         if (data.st2_old){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.old),"00", "00의 설명.");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.old),"00", "Hint : 'o_d'");
         }
         if (data.st2_life){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.life),"0", "0의 설명.");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.life),"0", "Hint : 'l__e'");
         }
         if (data.st2_death){
-            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.death),"00", "00의 설명.");
+            adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.death),"00", "Hint : 'd___h'");
         }
         if (data.st2_key1){
             adapter.addItem(ContextCompat.getDrawable(getApplicationContext(),R.drawable.key),"기억의 키", "00의 기억의 키.");

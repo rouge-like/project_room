@@ -41,7 +41,7 @@ public class Door_puzzle extends Activity {
             n += "l";
         }
         if(bt.getId() == R.id.button8){
-            n += "n";
+            n += "t";
         }
         if(bt.getId() == R.id.button9){
             n += "m";
@@ -51,7 +51,7 @@ public class Door_puzzle extends Activity {
     }
     public void oninputBtn(View view){
         TextView tv = (TextView)findViewById(R.id.password);
-        if (tv.getText().equals("human")) {
+        if (tv.getText().equals("time")) {
             Toast.makeText(this,"문이 열립니다.",Toast.LENGTH_SHORT).show();
             data.st2_Dooropened = true;
 
