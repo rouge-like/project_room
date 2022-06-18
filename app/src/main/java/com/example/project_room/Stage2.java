@@ -46,7 +46,7 @@ public class Stage2 extends Activity {
                         @Override
                         public void onClick(View view) {
                             Door.setVisibility(View.VISIBLE);
-                            str2.setText("잠금장치가 풀었더니 문 옆에 마지막 잠금 장치가 보인다. 4개의 쪽지와 연관된 답을 입력하면 될 것 같다. \n Hint : 'ㅅㄹ'");
+                            str2.setText("잠금장치가 풀었더니 문 옆에 마지막 잠금 장치가 보인다. 4개의 쪽지와 연관된 답을 입력하면 될 것 같다. \n Hint : 't___'");
                             str2.setVisibility(View.VISIBLE);
                             str2.setOnClickListener(new View.OnClickListener() {
                                 @Override

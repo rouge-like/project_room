@@ -38,10 +38,10 @@ public class Statue1_puzzle extends Activity {
             n += "m";
         }
         if(bt.getId() == R.id.button7){
-            n += "y";
+            n += "r";
         }
         if(bt.getId() == R.id.button8){
-            n += "r";
+            n += "y";
         }
         if(bt.getId() == R.id.button9){
             n += "s";
