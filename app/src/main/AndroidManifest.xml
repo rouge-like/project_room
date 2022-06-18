@@ -27,12 +27,20 @@
             android:label="Stage1"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".Stage2"
+            android:label="Stage2"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".Stage3"
             android:label="Stage3"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Inventory"
             android:label="Inventory"
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:name=".Inven_st2"
+            android:label="Inven_st2"
             android:theme="@android:style/Theme.Dialog"/>
         <activity
             android:name=".Inven_st3"
@@ -47,6 +55,26 @@
             android:label="st3_password"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
         <activity
+            android:name=".Statue1_puzzle"
+            android:label="Statue1_puzzle"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity
+            android:name=".Statue2_puzzle"
+            android:label="Statue2_puzzle"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity
+            android:name=".Statue3_puzzle"
+            android:label="Statue3_puzzle"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity
+            android:name=".Statue4_puzzle"
+            android:label="Statue4_puzzle"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity
+            android:name=".Door_puzzle"
+            android:label="Door_puzzle"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
+        <activity
             android:name=".password"
             android:label="password"
             android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
@@ -56,6 +84,7 @@
         <activity android:name=".ending"
             android:label="ending"
             android:screenOrientation="portrait"/>
+
     </application>
 
 

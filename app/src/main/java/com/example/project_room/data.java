@@ -26,5 +26,24 @@ public class data extends Application { //게임 관련 데이터들을 저장�
     public static Boolean st3_monsterDefeat = false;
     public static Boolean st3_foundBone = false;
 
+    public static Boolean st2_key1 = false;
+    public static Boolean st2_key2 = false;
+    public static Boolean st2_key3 = false;
+    public static Boolean st2_key4 = false;
+    public static Boolean st2_memory = false;
+    public static Boolean st2_old = false;
+    public static Boolean st2_life = false;
+    public static Boolean st2_death = false;
+    public static Boolean st2_box1opened = false;
+    public static Boolean st2_box2opened = false;
+    public static Boolean st2_box3opened = false;
+    public static Boolean st2_box4opened = false;
+    public static Boolean st2_Dooropened = false;
+
+
+
+
+
+
 
 }

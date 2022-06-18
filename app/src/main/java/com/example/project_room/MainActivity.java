@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
     }
     public void onBtnStart(View view){ //Start Button 클릭시 실행
-        Intent intent = new Intent(this,Stage3.class);
+        Intent intent = new Intent(this,Stage2.class);
         startActivity(intent); //Stage3를 화면에 띄움
     }
 }
