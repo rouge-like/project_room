@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Stage1"
+            android:name=".Stage_final"
             android:label="Stage1"
             android:screenOrientation="portrait"/>
         <activity
@@ -31,7 +31,7 @@
             android:label="Stage2"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Stage3"
+            android:name=".Stage1"
             android:label="Stage3"
             android:screenOrientation="portrait"/>
         <activity

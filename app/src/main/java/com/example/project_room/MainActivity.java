@@ -1,16 +1,13 @@
 package com.example.project_room;
 
-import androidx.annotation.MainThread;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     Button start_button;
@@ -23,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
     }
     public void onBtnStart(View view){ //Start Button 클릭시 실행
-        Intent intent = new Intent(this,Stage2.class);
+        Intent intent = new Intent(this, Stage_final.class);
         startActivity(intent); //Stage3를 화면에 띄움
     }
 }

@@ -19,7 +19,7 @@ public class Stage2 extends Activity {
 
         setContentView(R.layout.stage2);
 
-        Door = (Button) findViewById(R.id.portal);
+        Door = (Button) findViewById(R.id.LockBtn);
         Door.setVisibility(View.INVISIBLE); // 마지막 문 잠금장치는 처음에 안보이게 표현
 
         str1 = (TextView) findViewById(R.id.textView1);
@@ -152,7 +152,7 @@ public class Stage2 extends Activity {
                                     @Override
                                     public void onClick(View view) {
                                         if (data.st2_Dooropened) {
-                                            Intent intent = new Intent(Stage2.this, Stage1.class);
+                                            Intent intent = new Intent(Stage2.this, Stage_final.class);
                                             startActivity(intent);
                                             finish();
                                         } else { //문 반응 -> 문제와 힌트 -> 비밀번호 입력창으로 넘어감

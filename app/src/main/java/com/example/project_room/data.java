@@ -16,7 +16,7 @@ public class data extends Application { //게임 관련 데이터들을 저장�
     public static boolean killHim; //true일시 그를 죽인다는 선택, false일시 그를 죽이지 않는다는 선택
     public static boolean ending; //true일시 1번엔딩 false일시 2번엔딩
     public static String passWordNum = ""; //입력되고 있는 비밀번호
-    public static String utfHello = "\\xec\\x95\\x88\\xeb\\x85\\x95"; //문자열 디코드 퍼즐의 정답
+    public static String utfHello = "a";//"\\xec\\x95\\x88\\xeb\\x85\\x95"; //문자열 디코드 퍼즐의 정답
     public static String whatItem = ""; //npc창에서 선택되고 있는 아이템 이름
     public static int [] enchantStones = new int[2]; // 강화석을 선택 안했을 경우 0, 올바른 강화석일 경우 1, 틀리거나 중복된 강화석일 경우 2
 
