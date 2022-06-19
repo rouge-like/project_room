@@ -91,7 +91,7 @@ public class Stage1 extends Activity {
         inven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Stage1.this, Inven_st3.class);
+                Intent intent = new Intent(Stage1.this, Inven_st1.class);
                 startActivity(intent);
             }
         });
@@ -99,7 +99,7 @@ public class Stage1 extends Activity {
         portal.setOnClickListener(new View.OnClickListener() { //포털 버튼을 누르면 스테이지 클리어
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Stage1.this, Stage_final.class);
+                Intent intent = new Intent(Stage1.this, Stage2.class);
                 startActivity(intent);
                 finish();
             }

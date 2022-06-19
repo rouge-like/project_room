@@ -43,7 +43,7 @@
             android:label="Inven_st2"
             android:theme="@android:style/Theme.Dialog"/>
         <activity
-            android:name=".Inven_st3"
+            android:name=".Inven_st1"
             android:label="Inven_st3"
             android:theme="@android:style/Theme.Dialog"/>
         <activity

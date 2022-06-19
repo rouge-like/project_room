@@ -40,8 +40,13 @@ public class data extends Application { //게임 관련 데이터들을 저장�
     public static Boolean st2_box4opened = false;
     public static Boolean st2_Dooropened = false;
 
-
-
+    public static int[][] st4_locate= new int[5][3];
+    public static int[] PR1= {4,1};
+    public static int[] PR2= {2,0};
+    public static int[] PR3= {1,1};
+    public static int[] PB= {0,1};
+    public static int[] PM1= {1,0};
+    public static int[] PM2= {0,2};
 
 
 

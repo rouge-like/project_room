@@ -55,7 +55,7 @@ public class Statue1_puzzle extends Activity {
             Toast.makeText(this,"박스가 열립니다.",Toast.LENGTH_SHORT).show();
             data.st2_box1opened = true;
             data.st2_key1 = true;
-
+            data.passWordNum = "";
             finish();
         } else {
             Toast.makeText(this,"잘못된 비밀번호입니다.",Toast.LENGTH_SHORT).show();

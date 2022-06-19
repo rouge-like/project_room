@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 import androidx.core.content.ContextCompat;
 
-public class Inven_st3 extends Activity { //Stage 3의 인벤토리(아이템창)
+public class Inven_st1 extends Activity { //Stage 3의 인벤토리(아이템창)
     private ListView mListView;
 
     @Override

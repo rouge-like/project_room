@@ -55,7 +55,7 @@ public class st3_password extends Activity {
             Toast.makeText(this,"금고 문이 열립니다.",Toast.LENGTH_SHORT).show();
             data.st3_safeOpened = true;
             data.st3_foundKey = true;
-
+            data.passWordNum = "";
             finish();
         } else {
             Toast.makeText(this,"잘못된 비밀번호입니다.",Toast.LENGTH_SHORT).show();

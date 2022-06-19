@@ -171,7 +171,7 @@
         android:alpha="0.7"
         android:background="@android:color/black"
         android:padding="16dp"
-        android:text="Stage -0- 던전"
+        android:text="Stage -4- 던전"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:visibility="invisible"

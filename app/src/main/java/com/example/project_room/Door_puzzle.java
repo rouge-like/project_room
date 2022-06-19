@@ -54,7 +54,7 @@ public class Door_puzzle extends Activity {
         if (tv.getText().equals("human")) {
             Toast.makeText(this,"문이 열립니다.",Toast.LENGTH_SHORT).show();
             data.st2_Dooropened = true;
-
+            data.passWordNum = "";
             finish();
         } else {
             Toast.makeText(this,"잘못된 비밀번호입니다.",Toast.LENGTH_SHORT).show();
